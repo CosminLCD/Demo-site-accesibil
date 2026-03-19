@@ -13,7 +13,7 @@
         <ul>
           <li><a href="complect-inaccesibil.html">Acasă</a></li>
           <li class="dropdown">
-            <button class="dropbtn">Resurse <span>▼</span></button>
+            <button class="dropbtn" tabindex="-1">Resurse <span>▼</span></button>
             <div class="dropdown-content">
               <a href="faq.html">Întrebări fregvente</a>
               <a href="testare_automata.html">Ghid pentru testare automata</a>
@@ -37,7 +37,7 @@
       </div>
 
       <section>
-        <h2>Prețuri Servicii</h2>
+        <p class="heading-secondary">Prețuri Servicii</p>
         <table>
           <tr>
             <td class="fake-header">Serviciu</td>
@@ -60,7 +60,7 @@
         </table>
       </section>
       <section>
-        <h2>Echipa noastră</h2>
+        <p class="heading-secondary">Echipa noastră</p>
         <div class="image-grid">
           <figure>
             <img
@@ -76,7 +76,7 @@
         să creeze soluții inovatoare împreună.
       </section>
       <section>
-        <h2>Erori de navigare și bariere invizibile</h2>
+        <p class="heading-secondary">Erori de navigare și bariere invizibile</p>
         <ul>
           <li>
             <strong>Lipsa focusului vizual:</strong> Utilizatorul de tastatură
@@ -94,10 +94,10 @@
       </section>
 
       <section>
-        <h2>Moduri de Testare</h2>
+        <p class="heading-secondary">Moduri de Testare</p>
         <div class="tabs-container">
-          <button class="tab-button" id="tab-manual">Testare Manuală</button>
-          <button class="tab-button" id="tab-auto">Testare Automatizată</button>
+          <button class="tab-button" id="tab-manual" tabindex="-1">Testare Manuală</button>
+          <button class="tab-button" id="tab-auto" tabindex="-1">Testare Automatizată</button>
         </div>
 
       <div
@@ -106,7 +106,7 @@
           role="tabpanel"
           aria-labelledby="tab-manual"
         >
-          <h3>Testare Manuală</h3>
+          <p class="heading-tertiary">Testare Manuală</p>
           <p>
             Testarea manuală implică utilizarea directă a site-ului tău cu
             echipamente de asistență și metode de navigare pe care le folosesc
@@ -143,7 +143,7 @@
           aria-labelledby="tab-auto"
           aria-hidden="true"
         >
-          <h3>Testare Automatizată</h3>
+          <p class="heading-tertiary">Testare Automatizată</p>
           <p>
             Instrumentele automate analizează codul și structura paginii pentru
             a identifica probleme comune de accesibilitate. Sunt rapide și
@@ -182,7 +182,7 @@
       </section>
 
       <section class="newsletter-section">
-        <h2>Newsletter</h2>
+        <p class="heading-secondary">Newsletter</p>
         <form class="newsletter-form">
           <div class="form-group">
             <input type="text" placeholder="Adresa de e-mail" />
@@ -192,7 +192,7 @@
       </section>
 
       <section>
-        <h2>Interacțiuni Defecte</h2>
+        <p class="heading-secondary">Interacțiuni Defecte</p>
         <p>
           Un pop-up (modal) defect nu poate fi controlat în totalitate de la
           tastatură.
@@ -205,7 +205,7 @@
       <div id="modalOverlay" class="modal-overlay">
         <div class="modal-content">
           <button id="closeModal" class="close-icon">×</button>
-          <h2>Setări Notificări</h2>
+          <p class="heading-secondary">Setări Notificări</p>
           <p>Alege ce tip de noutăți dorești să primești:</p>
 
 

@@ -63,9 +63,9 @@ nav a,
 
 nav a:focus,
 .dropbtn:focus {
-  outline: 3px solid var(--focus-outline);
-  background-color: #f0f7f9;
-  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0;
 }
 
 .dropdown-content {
@@ -82,8 +82,7 @@ nav a:focus,
   font-weight: normal;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -98,6 +97,21 @@ h1 {
   color: var(--primary-color);
   font-size: 2.5rem;
 }
+
+.heading-secondary {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+.heading-tertiary {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
@@ -133,8 +147,8 @@ p {
 }
 
 .footer-link:focus {
-  outline: 3px solid var(--focus-outline);
-  background-color: rgba(74, 144, 226, 0.1);
+  outline: none;
+  background-color: transparent;
 }
 
 table {
@@ -183,7 +197,7 @@ th {
   border-bottom-color: var(--primary-color);
 }
 
-.tab-panel h3 {
+.tab-panel .heading-tertiary {
   color: var(--primary-color);
   margin-top: 0;
 }
@@ -236,7 +250,7 @@ th {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.ghid-section h2 {
+.ghid-section .heading-secondary {
   color: var(--primary-color);
 }
 
@@ -317,9 +331,15 @@ th {
 
 .faq-question:focus {
   outline: none;
-  border-left: 4px solid var(--primary-color);
-  background-color: #f0f7f9;
-  padding-left: calc(20px - 4px);
+  border-left: none;
+  background-color: transparent;
+  padding-left: 20px;
+}
+
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .faq-question.is-active .icon {
@@ -340,8 +360,8 @@ body {
 
 /* Forțăm titlurile să rămână pe albastrul nou peste tot */
 h1,
-h2,
-h3,
+.heading-secondary,
+.heading-tertiary,
 .faq-question,
 .fake-link {
   color: var(--primary-color) !important;
@@ -537,9 +557,14 @@ table {
 }
 
 /* PROBLEMĂ: Ambele panouri apar la început dacă nu pui display: none */
-/* Pentru exemplul tău "Așa NU", le lăsăm pe ambele vizibile sau le ascundem prost */
+/* Am rezolvat problema vizuală inițială conform cerințelor */
 .tab-panel {
+  display: none;
   padding: 20px 0;
+}
+
+#panel-manual {
+  display: block;
 }
 
 /* SABOTAJ: Folosim opacity în loc de display:none */
